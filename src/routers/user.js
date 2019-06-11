@@ -33,7 +33,7 @@ router.post("/users", async (req, res) => {
 //   }
 // });
 
-router.get("/users/login", async (req, res) => {
+router.post("/users/login", async (req, res) => {
   try {
     const user = await User.findByCredentials(
       req.body.email,
